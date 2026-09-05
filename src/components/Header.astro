@@ -1,25 +1,23 @@
 ---
-import Logo from '../components/Logo.astro';
-
 const navItems = [
-    { linkText: 'Home', href: '/' },
-    { linkText: 'Revalidation', href: '/revalidation' },
-    { linkText: 'Image CDN', href: '/image-cdn' },
-    { linkText: 'Edge Function', href: '/edge' },
-    { linkText: 'Blobs', href: '/blobs' }
+    { linkText: 'Titiños', href: '#titinos' },
+    { linkText: 'Pan', href: '#pan' },
+    { linkText: 'Empanadas', href: '#empanadas' },
+    { linkText: 'Eventos', href: '#eventos' },
+    { linkText: 'Tartas', href: '#tartas' },
+    { linkText: 'Desayunos a domicilio', href: '#desayunos' },
+    { linkText: 'Franquíciate', href: '#franquiciate' }
 ];
 ---
 
-<nav class="flex flex-wrap items-center gap-4 pt-6 pb-16 sm:pt-12 sm:pb-24">
-    <a href="/">
-        <Logo />
-    </a>
+<nav class="flex flex-wrap items-center justify-between gap-6 border-b border-white/20 py-6 sm:py-8">
+    <a href="/" class="text-xl font-black tracking-tight no-underline text-white">BAKERY <span class="text-white/60">&amp; COFFEE</span> TITO</a>
     {
         !!navItems?.length && (
             <ul class="flex flex-wrap gap-x-4 gap-y-1">
                 {navItems.map((item) => (
                     <li>
-                        <a href={item.href} class="inline-block px-1.5 py-1 sm:px-3 sm:py-2">
+                        <a href={item.href} class="inline-block px-1.5 py-1 text-sm font-semibold no-underline text-white/80 hover:text-white sm:px-3 sm:py-2">
                             {item.linkText}
                         </a>
                     </li>

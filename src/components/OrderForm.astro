@@ -1,0 +1,55 @@
+<section id="formulario-pedido" class="border-y border-white/15 py-20 sm:py-28">
+  <p class="text-xs font-bold uppercase tracking-widest text-primary">Lo preparamos para ti</p>
+  <h2 class="mt-5 text-4xl font-black uppercase sm:text-6xl">Cuéntanos tu pedido</h2>
+  <p class="mt-5 text-white/70">Rellena los datos y abre WhatsApp o tu correo para enviarnos la solicitud. Confirmaremos contigo la disponibilidad y la recogida.</p>
+  <p class="mt-4">Contacto Bakery: <a href="tel:+34988255127" class="font-bold text-primary">988 255 127</a></p>
+  <form id="order-form" class="mt-8 grid gap-6 sm:grid-cols-2">
+    <label>Nombre del cliente *<input name="nombre" autocomplete="name" required maxlength="100" /></label>
+    <label>Teléfono del cliente *<input name="telefono" type="tel" autocomplete="tel" required maxlength="25" pattern="[+0-9 ()-]{6,25}" /></label>
+    <label>Día de recogida del pedido *<input name="dia" type="date" required /></label>
+    <label>Hora de recogida del pedido *<input name="hora" type="time" required /></label>
+    <label class="sm:col-span-2">Descripción del pedido a recoger *<textarea name="descripcion" rows="4" required maxlength="1500"></textarea></label>
+    <label class="sm:col-span-2">Observaciones del pedido<textarea name="observaciones" rows="3" maxlength="1000"></textarea></label>
+    <div class="flex flex-wrap gap-3 sm:col-span-2">
+      <button type="submit" name="canal" value="666528188" class="btn">WhatsApp · 666 52 81 88</button>
+      <button type="submit" name="canal" value="627509613" class="btn">WhatsApp · 627 50 96 13</button>
+      <button type="submit" name="canal" value="email" class="btn">Abrir correo</button>
+    </div>
+    <p class="text-sm text-white/60 sm:col-span-2">Cada botón abre el mensaje para que lo envíes. El correo incluye los tres destinatarios de Bakery. Para contactar con ambos WhatsApp, envía el mensaje en cada uno.</p>
+    <p id="order-status" role="status" class="text-primary sm:col-span-2"></p>
+  </form>
+</section>
+<style>
+  label { display: grid; gap: .6rem; font-weight: 600; }
+  input, textarea { width: 100%; min-width: 0; border: 1px solid #ffffff40; border-radius: .75rem; padding: .9rem; background: #171717; color: white; color-scheme: dark; }
+  input:focus, textarea:focus { outline: 2px solid #f2b35f; outline-offset: 2px; }
+</style>
+<script>
+  const form = document.querySelector<HTMLFormElement>('#order-form');
+  const date = form?.querySelector<HTMLInputElement>('[name="dia"]');
+  if (date) {
+    const now = new Date();
+    date.min = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+  }
+  document.querySelectorAll<HTMLAnchorElement>('[data-pedido]').forEach(link => {
+    link.addEventListener('click', () => {
+      const description = form?.querySelector<HTMLTextAreaElement>('[name="descripcion"]');
+      if (description && !description.value.trim()) description.value = link.dataset.pedido || '';
+    });
+  });
+  form?.addEventListener('submit', event => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+    const data = new FormData(form);
+    const channel = (event.submitter as HTMLButtonElement)?.value;
+    const day = String(data.get('dia')).split('-').reverse().join('/');
+    const message = `Solicitud para Bakery & Coffee Tito\n\nNombre: ${data.get('nombre')}\nTeléfono: ${data.get('telefono')}\nDía de recogida: ${day}\nHora de recogida: ${data.get('hora')}\nPedido: ${data.get('descripcion')}\nObservaciones: ${data.get('observaciones') || 'Sin observaciones'}\n\nContacto Bakery: 988 255 127`;
+    if (channel === 'email') {
+      window.location.href = `mailto:compras@panaderiatito.com,enoutumuro@gmail.com,soutopradamila@gmail.com?subject=${encodeURIComponent('Solicitud de pedido · Bakery & Coffee Tito')}&body=${encodeURIComponent(message)}`;
+    } else if (channel === '666528188' || channel === '627509613') {
+      window.open(`https://wa.me/34${channel}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
+    }
+    const status = document.querySelector('#order-status');
+    if (status) status.textContent = 'Completa el envío en WhatsApp o en tu aplicación de correo. El pedido queda pendiente de confirmación por Bakery.';
+  });
+</script>

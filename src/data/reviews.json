@@ -1,10 +1,50 @@
 {
-  "verifiedAt": "2026-09-05",
-  "googleUrl": "https://www.google.com/maps?cid=10620570672187920069",
+  "verifiedAt": "2026-09-09",
+  "googleUrl": "https://www.google.com/maps/place/Bakery+%26+Coffee+Tito/@42.3468093,-7.8547091,17z/data=!4m8!3m7!1s0xd2ffeb974a0c8d1:0x9363d8c193b14ec5!8m2!3d42.3468093!4d-7.8547091!9m1!1b1!16s%2Fg%2F1ttpj590",
   "overallRating": "4,1",
-  "totalReviews": 987,
+  "totalReviews": 992,
   "reviews": [
-    { "author": "Jorddy Subira", "rating": 5, "excerpt": "Un desayuno de 100.", "dateLabel": "Hace 8 meses (al consultar)", "source": "https://www.google.com/maps?cid=10620570672187920069" },
-    { "author": "Sandra Ferreiro", "rating": 4, "excerpt": "Muy acogedor, el personal muy amable. Tiene una terracita trasera muy cuca.", "dateLabel": "Editada hace 3 meses (al consultar)", "source": "https://www.google.com/maps?cid=10620570672187920069" }
+    {
+      "author": "Guille Macía Garayzábal",
+      "excerpt": "Buen lugar para ir de desayuno",
+      "dateLabel": "Hace un día (al consultar)",
+      "source": "https://www.google.com/maps/place/Bakery+%26+Coffee+Tito/@42.3468093,-7.8547091,17z/data=!4m8!3m7!1s0xd2ffeb974a0c8d1:0x9363d8c193b14ec5!8m2!3d42.3468093!4d-7.8547091!9m1!1b1!16s%2Fg%2F1ttpj590",
+      "rating": 5
+    },
+    {
+      "author": "Carlos Sombra de escritor",
+      "excerpt": "Perfecto para charlas con amigos para ponerse al día con estos",
+      "dateLabel": "Hace 5 días (al consultar)",
+      "source": "https://www.google.com/maps/place/Bakery+%26+Coffee+Tito/@42.3468093,-7.8547091,17z/data=!4m8!3m7!1s0xd2ffeb974a0c8d1:0x9363d8c193b14ec5!8m2!3d42.3468093!4d-7.8547091!9m1!1b1!16s%2Fg%2F1ttpj590",
+      "rating": 5
+    },
+    {
+      "author": "antonio yañez",
+      "excerpt": "Unos desayunos ESPECTACULARES.",
+      "dateLabel": "Editada hace 2 semanas (al consultar)",
+      "source": "https://www.google.com/maps/place/Bakery+%26+Coffee+Tito/@42.3468093,-7.8547091,17z/data=!4m8!3m7!1s0xd2ffeb974a0c8d1:0x9363d8c193b14ec5!8m2!3d42.3468093!4d-7.8547091!9m1!1b1!16s%2Fg%2F1ttpj590",
+      "rating": 5
+    },
+    {
+      "author": "Leire Fernández Rodríguez",
+      "excerpt": "Lugar tranquilo para picar algo, tienen una carta bastante amplia y todo esta bastante bueno, los precios estan bien.",
+      "dateLabel": "Hace 2 semanas (al consultar)",
+      "source": "https://www.google.com/maps/place/Bakery+%26+Coffee+Tito/@42.3468093,-7.8547091,17z/data=!4m8!3m7!1s0xd2ffeb974a0c8d1:0x9363d8c193b14ec5!8m2!3d42.3468093!4d-7.8547091!9m1!1b1!16s%2Fg%2F1ttpj590",
+      "rating": 4
+    },
+    {
+      "author": "Araceli Gascó",
+      "excerpt": "Cuando venimos a Ourense de vacaciones,siempre venimos aquí a desayunar,una maravilla la atención y muy buenos desayunos,lo recomiendo.",
+      "dateLabel": "Hace 2 semanas (al consultar)",
+      "source": "https://www.google.com/maps/place/Bakery+%26+Coffee+Tito/@42.3468093,-7.8547091,17z/data=!4m8!3m7!1s0xd2ffeb974a0c8d1:0x9363d8c193b14ec5!8m2!3d42.3468093!4d-7.8547091!9m1!1b1!16s%2Fg%2F1ttpj590",
+      "rating": 5
+    },
+    {
+      "author": "Daniel Gent",
+      "excerpt": "Gente amable. ¡Excelente servicio!",
+      "dateLabel": "Hace 3 semanas (al consultar) · Traducción de Google",
+      "source": "https://www.google.com/maps/place/Bakery+%26+Coffee+Tito/@42.3468093,-7.8547091,17z/data=!4m8!3m7!1s0xd2ffeb974a0c8d1:0x9363d8c193b14ec5!8m2!3d42.3468093!4d-7.8547091!9m1!1b1!16s%2Fg%2F1ttpj590",
+      "rating": 5
+    }
   ]
 }
